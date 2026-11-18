@@ -112,17 +112,20 @@ external browser requests. Screenshots and results are kept in ignored
 
 ## Presentation, privacy and rights
 
-- Text branding is **TIMESAT 4 User Guide**, with green navigation and a light/
-  dark theme. No official TIMESAT logo has been asserted or newly designed.
+- Text branding is **TIMESAT 4 User Guide**, with a blue-and-gold palette informed
+  by the established TIMESAT wordmark. A white masthead, fine gold rules and
+  serif reading typography give the guide a traditional handbook presentation.
+  No logo artwork has been copied or newly designed.
   The theme's generic favicon and interface controls are theme resources.
-- System fonts, local full-text search, highlighted/copyable code, scrollable
+- Locally available fonts, local full-text search, highlighted/copyable code, scrollable
   tables, responsive navigation and accessible heading links are enabled.
-- Every page has a **Back to TIMESAT GitHub** footer button linking to the
-  organization homepage. The header's documentation-repository source link is
-  retained as a separate destination; chapter Markdown needs no duplicate links.
-- A persistent header shortcut bar provides **Contents**, **TIMESAT GitHub**
-  and the previous/next pages without scrolling to the footer. On small screens,
-  previous/next use arrow buttons with accessible page labels. The header
+- Every page has a **Back to TIMESAT GitHub** footer link to the organization
+  homepage. The documentation-repository source link is a separate destination;
+  chapter Markdown needs no duplicate links.
+- The single masthead provides **Contents** and **TIMESAT GitHub** without a
+  second navigation bar. Small screens use labelled list/GitHub icons; the source
+  link remains available in the chapter drawer. Existing chapter-opening links
+  and previous/next footer navigation are retained. The header
   override derives from the pinned Material template; review it when upgrading
   the theme.
 - The existing equation uses PyMdown Arithmatex and locally served MathJax SVG

@@ -1,108 +1,119 @@
-/* Text branding only: no invented TIMESAT logo or externally loaded fonts. */
+/* TIMESAT's established blue and gold inform the palette; no logo asset is copied. */
 :root {
-  --md-primary-fg-color: #245747;
-  --md-primary-fg-color--light: #387764;
-  --md-primary-fg-color--dark: #163d31;
-  --md-accent-fg-color: #9a5600;
+  --timesat-blue: #00558b;
+  --timesat-gold: #ffcc00;
+  --md-primary-fg-color: #00558b;
+  --md-primary-fg-color--light: #206d9d;
+  --md-primary-fg-color--dark: #083a5b;
+  --md-primary-bg-color: #fff;
+  --md-accent-fg-color: #815c00;
+  --md-typeset-a-color: #00558b;
   --md-text-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --md-code-font: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --md-default-bg-color: #f6f7f9;
+  --timesat-paper: #fff;
+  --timesat-rule: #dde3e9;
+  --timesat-heading: #123d5b;
+  --timesat-muted: #596674;
 }
-
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f6f7f9;
+  --md-default-fg-color: #24303d;
+  --md-default-fg-color--light: #4e5966;
+  --md-default-fg-color--lighter: #65717d;
+  --md-typeset-a-color: #00558b;
+}
 [data-md-color-scheme="slate"] {
-  --md-accent-fg-color: #f2c06b;
-  --md-typeset-a-color: #9bd7bc;
+  --md-default-bg-color: #171f29;
+  --timesat-paper: #1d2834;
+  --timesat-rule: #3c4c5c;
+  --timesat-heading: #e5eef5;
+  --timesat-muted: #b3c0ce;
+  --md-typeset-a-color: #9acbed;
+  --md-accent-fg-color: #ffda61;
 }
-
-.md-grid { max-width: 86rem; }
-.md-header__button.md-logo, .md-nav__button.md-logo { display: none; }
-.md-typeset { line-height: 1.65; }
-.md-typeset h1 { font-weight: 600; letter-spacing: -0.02em; }
-.md-typeset h2 { font-weight: 600; }
+.md-grid { max-width: 66rem; }
+.md-header.timesat-masthead {
+  background: var(--timesat-paper);
+  color: var(--timesat-heading);
+  border-top: 4px solid var(--timesat-gold);
+  border-bottom: 1px solid var(--timesat-rule);
+  box-shadow: none;
+}
+.timesat-masthead .md-header__inner { height: 4.1rem; padding-inline: 0.8rem; }
+.timesat-brand { display: flex; align-items: baseline; gap: 0.8rem; margin-right: auto; white-space: nowrap; }
+.timesat-brand__name { font-family: Georgia, "Times New Roman", serif; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.05em; color: var(--md-typeset-a-color); }
+.timesat-brand__edition { font-size: 0.8rem; color: var(--timesat-muted); }
+/* Retain Material's title hooks without duplicating the masthead text. */
+.timesat-header-topic { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); margin: 0; }
+.timesat-header-links { display: flex; align-items: center; gap: 0.9rem; margin-right: 0.9rem; font-size: 0.7rem; }
+.timesat-header-link { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 44px; color: var(--timesat-heading); }
+.timesat-header-link:hover { color: var(--md-typeset-a-color); text-decoration: underline; text-underline-offset: 0.25rem; }
+.timesat-header-link__icon { display: none; }
+.timesat-header-link:focus-visible, .timesat-brand:focus-visible { outline: 2px solid var(--md-typeset-a-color); outline-offset: 3px; }
+.timesat-masthead .md-search__form { background: var(--md-default-bg-color); color: var(--timesat-heading); border: 1px solid var(--timesat-rule); border-radius: 2px; }
+.timesat-masthead .md-search__input::placeholder { color: var(--timesat-muted); }
+.timesat-masthead .md-search__icon { color: var(--timesat-muted); }
+.md-main__inner { margin-top: 1.5rem; }
+.md-content { background: var(--timesat-paper); border: 1px solid var(--timesat-rule); min-width: 0; }
+.md-content__inner { margin: 1.8rem 2.1rem 2.5rem; padding-top: 0; }
+.md-typeset { font-family: Georgia, "Times New Roman", serif; font-size: 0.87rem; line-height: 1.8; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { font-family: Georgia, "Times New Roman", serif; color: var(--timesat-heading); }
+.md-typeset h1 { margin-top: 0; margin-bottom: 1.05em; font-size: 2rem; font-weight: 400; line-height: 1.22; letter-spacing: -0.025em; padding-bottom: 0.65em; border-bottom: 2px solid var(--timesat-gold); }
+.md-typeset h2 { margin-top: 1.65em; font-size: 1.35rem; font-weight: 400; line-height: 1.35; }
+.md-typeset h3 { font-weight: 600; line-height: 1.4; }
+.md-typeset a { text-underline-offset: 0.15em; }
+.md-typeset a:hover { text-decoration: underline; }
 .md-typeset img { max-width: 100%; height: auto; }
+.md-typeset blockquote { border-left: 3px solid var(--timesat-gold); }
+.md-typeset table:not([class]) { font-family: var(--md-text-font); font-size: 0.67rem; border-color: var(--timesat-rule); }
+.md-typeset table:not([class]) th { background: var(--md-default-bg-color); color: var(--timesat-heading); }
+.md-typeset pre > code { font-size: 0.72rem; }
+.md-nav { font-size: 0.7rem; line-height: 1.55; }
+.md-nav__link { overflow-wrap: anywhere; }
+.md-nav--primary .md-nav__title { font-family: Georgia, "Times New Roman", serif; font-size: 0.85rem; font-weight: 400; color: var(--timesat-heading); background: transparent; box-shadow: none; line-height: 1.45; }
+.md-nav__item--section > .md-nav__link { margin-top: 1rem; color: var(--timesat-heading); font-size: 0.67rem; }
+.md-nav__link--active { font-weight: 650; }
+.md-nav__button.md-logo { display: none; }
+/* Keep SVG's intrinsic dimensions so wide equations scroll on narrow screens. */
 .md-typeset .arithmatex { overflow-x: auto; overflow-y: hidden; padding-block: 0.4rem; }
-/* Keep SVG's intrinsic dimensions: Material's general max-width rule can
-   otherwise collapse a wide MathJax equation inside a narrow scroll container. */
-.md-typeset .arithmatex mjx-container[display="true"] {
-  width: max-content;
-  min-width: 100%;
-}
+.md-typeset .arithmatex mjx-container[display="true"] { width: max-content; min-width: 100%; }
 .md-typeset .arithmatex mjx-container > svg { max-width: none; }
 .md-typeset .mermaid { overflow-x: auto; }
 .md-typeset .mermaid svg { max-width: 100%; height: auto; }
-.md-typeset pre > code { font-size: 0.78rem; }
-.md-nav__link { overflow-wrap: anywhere; }
-
-.timesat-guide-nav {
-  border-top: 1px solid rgb(255 255 255 / 18%);
-  background-color: var(--md-primary-fg-color--dark);
+.md-footer { margin-top: 2rem; background: #083a5b; color: #fff; }
+.md-footer-meta { background: #062d47; }
+.md-footer-meta .timesat-organization-link { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-size: 0.7rem; text-underline-offset: 0.2rem; }
+.md-footer-meta .timesat-organization-link:hover { text-decoration: underline; }
+.md-footer-meta .timesat-organization-link:focus-visible { outline: 2px solid var(--timesat-gold); outline-offset: 3px; }
+@media (max-width: 76.2344em) {
+  .timesat-brand__edition { display: none; }
+  .timesat-header-links { gap: 0.7rem; }
 }
-.timesat-guide-nav__inner {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.2rem 0.6rem;
+@media (max-width: 59.9844em) {
+  .timesat-masthead .md-header__inner { height: 3.1rem; padding-inline: 0.25rem; }
+  .timesat-brand__name { font-size: 1.25rem; }
+  .timesat-header-links { gap: 0; margin-right: 0; }
+  .timesat-header-link { justify-content: center; min-width: 40px; min-height: 44px; }
+  .timesat-header-link__icon { display: inline-flex; }
+  .timesat-header-link__text, .timesat-header-link--source { display: none; }
+  .md-content__inner { margin: 1.4rem 1.4rem 2rem; }
 }
-.timesat-guide-nav__pages {
-  display: flex;
-  gap: 0.4rem;
-  margin-left: auto;
-}
-.timesat-guide-nav__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  min-width: 44px;
-  min-height: 44px;
-  padding: 0.35rem 0.55rem;
-  border-radius: 0.2rem;
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.timesat-guide-nav__link:hover {
-  background-color: rgb(255 255 255 / 12%);
-}
-.timesat-guide-nav__link:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: -2px;
-}
-@media (max-width: 37.5em) {
-  .timesat-guide-nav__inner,
-  .timesat-guide-nav__pages { gap: 0.15rem; }
-  .timesat-guide-nav__inner { padding-inline: 0.4rem; }
-  .timesat-guide-nav__link { padding-inline: 0.35rem; }
-  .timesat-guide-nav__label { display: none; }
-}
-@media print {
-  .timesat-guide-nav { display: none; }
-}
-
-.md-footer-meta .timesat-organization-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0.4rem 0.8rem;
-  border: 1px solid currentColor;
-  border-radius: 0.2rem;
-  color: var(--md-footer-fg-color);
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-.md-footer-meta .timesat-organization-link:hover {
-  background-color: rgb(255 255 255 / 10%);
-}
-.md-footer-meta .timesat-organization-link:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
-}
-
 @media (max-width: 44.9375em) {
-  .md-typeset h1 { font-size: 1.65em; }
+  .md-main__inner { margin-top: 0; }
+  .md-content { border: 0; }
+  .md-content__inner { margin: 1.35rem 1rem 1.8rem; }
+  .md-typeset { font-size: 0.85rem; }
+  .md-typeset h1 { font-size: 1.7rem; }
+  .md-typeset h2 { font-size: 1.25rem; }
+  .md-footer { margin-top: 0; }
 }
-
+@media (max-width: 23.4375em) {
+  .timesat-brand__name { font-size: 1.05rem; }
+  .timesat-header-link { min-width: 36px; }
+  .timesat-masthead .md-header__button { margin-inline: 0.15rem; padding-inline: 0.3rem; }
+}
 @media print {
+  .md-content { border: 0; }
   .md-typeset .arithmatex { overflow: visible; }
 }

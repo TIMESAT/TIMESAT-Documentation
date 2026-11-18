@@ -41,13 +41,13 @@ formatting and byte-identical third-party distributions across platforms.
 | [scripts/site_hooks.py](scripts/site_hooks.py) | Explicit publication allowlist; reads canonical Markdown through virtual files |
 | [scripts/check_site.py](scripts/check_site.py) | Rendered links/anchors, source preservation, search, formatting and safety checks |
 | [scripts/check_browser.py](scripts/check_browser.py) | Reproducible local responsive/browser checks |
-| [website/stylesheets/extra.css](website/stylesheets/extra.css) | Text branding, responsive equations and readable light/dark presentation |
+| [website/stylesheets/extra.css](website/stylesheets/extra.css) | Blue-and-gold text branding, traditional reading typography, responsive equations and light/dark presentation |
 | [website/javascripts/mathjax.js](website/javascripts/mathjax.js) | Equation-renderer configuration |
 | [overrides/main.html](overrides/main.html) | Loads the pinned local diagram renderer before Material |
 | [overrides/partials/logo.html](overrides/partials/logo.html) | Uses the project name without asserting an official logo |
 | [overrides/partials/source.html](overrides/partials/source.html) | Plain repository link without live GitHub-statistics requests |
-| [overrides/partials/header.html](overrides/partials/header.html) and [guide-navigation.html](overrides/partials/guide-navigation.html) | Persistent contents, organization and previous/next shortcuts within the theme header |
-| [overrides/partials/copyright.html](overrides/partials/copyright.html) | Global organization-homepage footer button; existing optional copyright/generator rendering retained |
+| [overrides/partials/header.html](overrides/partials/header.html) and [guide-navigation.html](overrides/partials/guide-navigation.html) | Single masthead with contents, organization and documentation-source links |
+| [overrides/partials/copyright.html](overrides/partials/copyright.html) | Global organization-homepage footer link; existing optional copyright/generator rendering retained |
 | [MathJax runtime](website/javascripts/vendor/mathjax-tex-svg-3.2.2.js) and [licence](website/javascripts/vendor/mathjax-LICENSE.txt) | Unmodified MathJax 3.2.2 SVG distribution and Apache 2.0 terms |
 | [Mermaid runtime](website/javascripts/vendor/mermaid-11.12.1.min.js) and [licence](website/javascripts/vendor/mermaid-LICENSE.txt) | Unmodified Mermaid 11.12.1 distribution and MIT terms |
 | [Material licence](website/javascripts/vendor/material-LICENSE.txt) | Retained theme redistribution notice |
