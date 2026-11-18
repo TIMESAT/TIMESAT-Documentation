@@ -115,8 +115,12 @@ external browser requests. Screenshots and results are kept in ignored
 - Text branding is **TIMESAT 4 User Guide**, with a blue-and-gold palette informed
   by the established TIMESAT wordmark. A white masthead, fine gold rules and
   serif reading typography give the guide a traditional handbook presentation.
-  No logo artwork has been copied or newly designed.
-  The theme's generic favicon and interface controls are theme resources.
+  The masthead uses text branding rather than logo artwork. Interface controls
+  are theme resources.
+- The favicon is the existing blue-and-gold TIMESAT application icon, reused
+  unchanged with maintainer approval in [images/timesat.ico](website/images/timesat.ico).
+  It contains 16, 24, 32, 48, 64, 128 and 256 pixel versions. The image is
+  explicitly allowlisted for publication and configured through `theme.favicon`.
 - Locally available fonts, local full-text search, highlighted/copyable code, scrollable
   tables, responsive navigation and accessible heading links are enabled.
 - Contents and organization links are provided in the fixed masthead. The home

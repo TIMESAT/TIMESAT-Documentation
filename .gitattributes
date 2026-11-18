@@ -1,6 +1,7 @@
 # Keep authored text consistent across platforms.
 * text=auto eol=lf
 *.png -text
+*.ico -text
 
 # Preserve existing Markdown hard breaks and end-of-file formatting.
 *.md whitespace=-blank-at-eol,-blank-at-eof

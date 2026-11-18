@@ -42,6 +42,7 @@ formatting and byte-identical third-party distributions across platforms.
 | [scripts/check_site.py](scripts/check_site.py) | Rendered links/anchors, source preservation, search, formatting and safety checks |
 | [scripts/check_browser.py](scripts/check_browser.py) | Reproducible local responsive/browser checks |
 | [website/stylesheets/extra.css](website/stylesheets/extra.css) | Blue-and-gold text branding, traditional reading typography, responsive equations and light/dark presentation |
+| [website/images/timesat.ico](website/images/timesat.ico) | Existing TIMESAT application icon, reused unchanged with maintainer approval as the site favicon |
 | [website/javascripts/mathjax.js](website/javascripts/mathjax.js) | Equation-renderer configuration |
 | [overrides/main.html](overrides/main.html) | Omits the home-page footer and loads the pinned local diagram renderer before Material |
 | [overrides/partials/logo.html](overrides/partials/logo.html) | Uses the project name without asserting an official logo |

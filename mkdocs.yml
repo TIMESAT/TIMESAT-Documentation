@@ -15,6 +15,7 @@ theme:
   custom_dir: overrides
   language: en
   font: false
+  favicon: images/timesat.ico
   palette:
     - media: '(prefers-color-scheme: light)'
       scheme: default

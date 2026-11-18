@@ -39,6 +39,7 @@ PUBLIC_FILES = (
 )
 
 WEBSITE_FILES = (
+    "images/timesat.ico",
     "stylesheets/extra.css",
     "javascripts/mathjax.js",
     "javascripts/vendor/mathjax-tex-svg-3.2.2.js",
