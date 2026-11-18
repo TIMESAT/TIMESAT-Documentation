@@ -1,7 +1,7 @@
 # Documentation website preparation and validation
 
 **Date:** 18 November 2026  
-**Scope:** website preparation and public-draft validation; GitHub Pages has not been activated.
+**Scope:** website preparation and public-draft validation; deployment is controlled by the workflow and repository settings.
 
 ## Result
 
@@ -50,7 +50,7 @@ formatting and byte-identical third-party distributions across platforms.
 | [Mermaid runtime](website/javascripts/vendor/mermaid-11.12.1.min.js) and [licence](website/javascripts/vendor/mermaid-LICENSE.txt) | Unmodified Mermaid 11.12.1 distribution and MIT terms |
 | [Material licence](website/javascripts/vendor/material-LICENSE.txt) | Retained theme redistribution notice |
 | [Runtime notices](website/javascripts/vendor/THIRD-PARTY-NOTICES.md) | Distribution provenance, versions, licence scope and runtime hashes |
-| [.github/workflows/documentation-pages.yml](.github/workflows/documentation-pages.yml) | Manual-only, explicitly guarded Pages deployment preparation |
+| [.github/workflows/documentation-pages.yml](.github/workflows/documentation-pages.yml) | Automatic main-branch deployment with a repository switch and optional manual runs |
 | [WEBSITE.md](WEBSITE.md) | Local setup, website structure, maintenance and future deployment instructions |
 | [WEBSITE-VALIDATION.md](WEBSITE-VALIDATION.md) | This results report |
 
@@ -158,29 +158,30 @@ scientific approval and permission to publish the guide.
 
 ## Deployment preparation and remaining checks
 
-The prepared workflow has only a manual dispatch trigger. Its deployment input
-defaults to **false**. Actual deployment additionally requires **main** and the
-repository variable **PAGES_DEPLOYMENT_ENABLED=true**. It uses read-only checkout
+The workflow runs automatically on pushes to **main** and retains a manual
+dispatch trigger. Automatic deployment requires repository variable
+**PAGES_DEPLOYMENT_ENABLED=true**. Manual runs additionally require the deployment
+input to be enabled; that input defaults to **false**. Artifact upload and
+deployment use the same main-branch/event/switch conditions. It uses read-only checkout
 credentials, pinned official GitHub actions, and grants `pages: write` and
 `id-token: write` only to the deployment job. A `github-pages` environment is
 declared, with automatic Pages enablement disabled.
 
-The workflow's YAML, trigger/default, branch/variable gates, permission split,
-environment and five action commit pins were checked locally. The commits were
-resolved from the official action repositories. The remote workflow has **not**
-been executed; repository/organization policies and Pages deployment still need
-verification when publication is explicitly authorized.
+The workflow's YAML, automatic/manual triggers, input default, branch/variable
+gates, permission split, environment and five action commit pins were checked
+locally. The commits were resolved from the official action repositories.
+Server-side execution and deployment results are recorded in GitHub Actions.
 
-No Pages setting, repository variable or deployment environment was changed.
-No deployment artifact was uploaded and no GitHub Release was created.
-Documentation repository publication is recorded in Git history and does not
-trigger this manual-only Pages workflow.
+The workflow does not automatically enable Pages or change repository variables
+or environment policies. It creates no GitHub Release. Once the administrator's
+one-time Pages setup and deployment switch are enabled, pushes to `main` trigger
+automatic publication after successful validation.
 
 After approval to activate Pages, follow [WEBSITE.md](WEBSITE.md): select
 **GitHub Actions** in repository Pages settings,
 configure the `github-pages` environment, enable the repository variable only
-when ready, and manually request deployment from `main`. Review the published
-URL and its downloads/search/rendering after that future deployment.
+when ready, and push approved updates to `main`. Review the successful run and
+the published URL, downloads, search and rendering after deployment.
 
 One scheduled maintenance decision remains: Material's current upstream package
 notice announces end of life on **5 May 2027**. The requested stack is retained;

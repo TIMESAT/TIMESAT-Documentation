@@ -19,7 +19,7 @@ scripts/check_site.py             Generated links, anchors, search and safety ch
 scripts/check_browser.py          Local desktop/mobile Chromium checks
 website/                         Website CSS and pinned, licensed browser runtimes
 overrides/                       Small Material template customizations
-.github/workflows/                Manual, guarded Pages deployment preparation
+.github/workflows/                Automatic main-branch Pages deployment and manual runs
 site/                            Generated output; ignored, never edited
 ```
 
@@ -129,47 +129,52 @@ external browser requests. Screenshots and results are kept in ignored
 - No analytics, Google Fonts, external JavaScript CDN, GUI application source,
   local settings or credentials are needed by the generated site.
 
-## GitHub Pages deployment: prepared, not activated
+## GitHub Pages deployment
 
-The intended project-site address is
-`https://timesat.github.io/TIMESAT-Documentation/`. This is a configuration target,
-not a claim that the site is live. No custom domain or `gh-pages` branch is used.
+The project-site address is `https://timesat.github.io/TIMESAT-Documentation/`.
+No custom domain or `gh-pages` branch is used.
 
-The workflow has **only `workflow_dispatch`**, with deployment **false** by
-default. There is no push, release or pull-request deployment trigger. A manual
-build without deployment does not upload a Pages artifact. Deployment also
-requires the `main` branch and repository variable
-`PAGES_DEPLOYMENT_ENABLED` to equal the literal string `true`.
+Every **push to `main`** runs the strict build and generated-site checks, then
+automatically deploys the validated result when repository variable
+`PAGES_DEPLOYMENT_ENABLED` equals the literal string `true`. Failed builds or
+checks prevent deployment. Pull requests, other branches, tags and releases do
+not trigger automatic publication.
 
-No remote settings or variables were changed during website preparation.
-After explicit publication approval, a repository administrator can:
+`workflow_dispatch` remains available for manual runs. Its deployment input
+defaults to **false**, allowing build-only checks. A manual deployment requires
+selecting `main`, enabling the deployment input and keeping the same repository
+switch enabled. Artifact upload and deployment share these conditions.
 
-1. Review the complete scientific/publication content and the proposed files,
-   then separately authorize committing and pushing them to `main`.
-2. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as
-   the source. Do not select a publishing branch.
-3. Ensure repository/organization Actions policies permit the pinned official
+One-time repository configuration:
+
+1. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as
+   the source, using the existing workflow.
+2. Ensure repository/organization Actions policies permit the pinned official
    GitHub actions. The build needs `contents: read`; the deployment job alone
    receives `pages: write` and `id-token: write`. No personal access token is
    required and the workflow does not request repository write access.
-4. Configure the **github-pages** environment's allowed deployment branch as
-   `main`, and require a reviewer where the repository's plan/policy permits.
-5. Only when ready to enable publication, create the repository **Actions
+3. Configure the **github-pages** environment's allowed deployment branch as
+   `main`. Any existing environment approval rules still apply to automatic
+   deployments; a required reviewer must approve the run before it proceeds.
+4. When ready to enable publication, create the repository **Actions
    variable** `PAGES_DEPLOYMENT_ENABLED=true` under **Settings → Secrets and
    variables → Actions → Variables**. It is a switch, not a secret.
-6. In **Actions → Documentation Pages**, choose **Run workflow**, select `main`
-   and deliberately enable the deployment input. Review/approve the environment
-   gate if configured. The strict build and generated-site checker must pass
-   before the artifact can be deployed.
-7. Verify the resulting Pages URL, search, equation, diagram, downloads and
-   mobile navigation. For later changes, repeat the manual review/deployment
-   procedure. Removing the variable blocks future workflow deployments; taking
-   an already published site offline is a separate Pages administration action.
+
+For routine updates, review the Markdown changes, commit and push them to
+`main`, then check **Actions → Documentation Pages** for successful `build` and
+`deploy` jobs. No manual workflow run is needed. Verify the resulting Pages URL,
+search, equation, diagram, downloads and mobile navigation as appropriate.
+
+If the switch is enabled after a push whose deployment was skipped, run the
+workflow manually from `main` with deployment enabled, or make the next approved
+push. Removing the variable or setting it to `false` pauses future deployments
+while retaining build/check runs. Taking an already published site offline is a
+separate Pages administration action.
 
 `configure-pages` has automatic enablement disabled, so a workflow run will not
 silently turn Pages on. It must already have been configured by an administrator.
 The pinned action commit IDs were resolved from the official action repositories.
-The GitHub workflow itself has not been run as part of local validation.
+Remote execution and deployment results are available in GitHub Actions.
 
 ## Maintenance
 
