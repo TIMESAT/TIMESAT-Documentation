@@ -32,6 +32,26 @@
 .md-typeset pre > code { font-size: 0.78rem; }
 .md-nav__link { overflow-wrap: anywhere; }
 
+.md-footer-meta .timesat-organization-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid currentColor;
+  border-radius: 0.2rem;
+  color: var(--md-footer-fg-color);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.md-footer-meta .timesat-organization-link:hover {
+  background-color: rgb(255 255 255 / 10%);
+}
+.md-footer-meta .timesat-organization-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 @media (max-width: 44.9375em) {
   .md-typeset h1 { font-size: 1.65em; }
 }

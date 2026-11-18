@@ -46,6 +46,7 @@ formatting and byte-identical third-party distributions across platforms.
 | [overrides/main.html](overrides/main.html) | Loads the pinned local diagram renderer before Material |
 | [overrides/partials/logo.html](overrides/partials/logo.html) | Uses the project name without asserting an official logo |
 | [overrides/partials/source.html](overrides/partials/source.html) | Plain repository link without live GitHub-statistics requests |
+| [overrides/partials/copyright.html](overrides/partials/copyright.html) | Global organization-homepage footer button; existing optional copyright/generator rendering retained |
 | [MathJax runtime](website/javascripts/vendor/mathjax-tex-svg-3.2.2.js) and [licence](website/javascripts/vendor/mathjax-LICENSE.txt) | Unmodified MathJax 3.2.2 SVG distribution and Apache 2.0 terms |
 | [Mermaid runtime](website/javascripts/vendor/mermaid-11.12.1.min.js) and [licence](website/javascripts/vendor/mermaid-LICENSE.txt) | Unmodified Mermaid 11.12.1 distribution and MIT terms |
 | [Material licence](website/javascripts/vendor/material-LICENSE.txt) | Retained theme redistribution notice |

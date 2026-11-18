@@ -117,6 +117,9 @@ external browser requests. Screenshots and results are kept in ignored
   The theme's generic favicon and interface controls are theme resources.
 - System fonts, local full-text search, highlighted/copyable code, scrollable
   tables, responsive navigation and accessible heading links are enabled.
+- Every page has a **Back to TIMESAT GitHub** footer button linking to the
+  organization homepage. The header's documentation-repository source link is
+  retained as a separate destination; chapter Markdown needs no duplicate links.
 - The existing equation uses PyMdown Arithmatex and locally served MathJax SVG
   output. The original Mermaid architecture block renders through the locally
   served Mermaid runtime. Scientific Markdown and diagram source are unchanged.
