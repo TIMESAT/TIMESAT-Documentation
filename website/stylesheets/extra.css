@@ -72,6 +72,9 @@
 .md-nav { font-size: 0.7rem; line-height: 1.55; }
 .md-nav__link { overflow-wrap: anywhere; }
 .md-nav--primary .md-nav__title { font-family: Georgia, "Times New Roman", serif; font-size: 0.85rem; font-weight: 400; color: var(--timesat-heading); background: transparent; box-shadow: none; line-height: 1.45; }
+@media (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__title { display: none; }
+}
 .md-nav__item--section > .md-nav__link { margin-top: 1rem; color: var(--timesat-heading); font-size: 0.67rem; }
 .md-nav__link--active { font-weight: 650; }
 .md-nav__button.md-logo { display: none; }
