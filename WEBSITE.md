@@ -120,6 +120,11 @@ external browser requests. Screenshots and results are kept in ignored
 - Every page has a **Back to TIMESAT GitHub** footer button linking to the
   organization homepage. The header's documentation-repository source link is
   retained as a separate destination; chapter Markdown needs no duplicate links.
+- A persistent header shortcut bar provides **Contents**, **TIMESAT GitHub**
+  and the previous/next pages without scrolling to the footer. On small screens,
+  previous/next use arrow buttons with accessible page labels. The header
+  override derives from the pinned Material template; review it when upgrading
+  the theme.
 - The existing equation uses PyMdown Arithmatex and locally served MathJax SVG
   output. The original Mermaid architecture block renders through the locally
   served Mermaid runtime. Scientific Markdown and diagram source are unchanged.
