@@ -1,0 +1,6 @@
+# Local website tooling and generated artifacts
+/.venv-site/
+/.website-review/
+/site/
+__pycache__/
+*.py[cod]

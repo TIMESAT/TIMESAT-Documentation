@@ -1,0 +1,41 @@
+/* Text branding only: no invented TIMESAT logo or externally loaded fonts. */
+:root {
+  --md-primary-fg-color: #245747;
+  --md-primary-fg-color--light: #387764;
+  --md-primary-fg-color--dark: #163d31;
+  --md-accent-fg-color: #9a5600;
+  --md-text-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --md-code-font: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #f2c06b;
+  --md-typeset-a-color: #9bd7bc;
+}
+
+.md-grid { max-width: 86rem; }
+.md-header__button.md-logo, .md-nav__button.md-logo { display: none; }
+.md-typeset { line-height: 1.65; }
+.md-typeset h1 { font-weight: 600; letter-spacing: -0.02em; }
+.md-typeset h2 { font-weight: 600; }
+.md-typeset img { max-width: 100%; height: auto; }
+.md-typeset .arithmatex { overflow-x: auto; overflow-y: hidden; padding-block: 0.4rem; }
+/* Keep SVG's intrinsic dimensions: Material's general max-width rule can
+   otherwise collapse a wide MathJax equation inside a narrow scroll container. */
+.md-typeset .arithmatex mjx-container[display="true"] {
+  width: max-content;
+  min-width: 100%;
+}
+.md-typeset .arithmatex mjx-container > svg { max-width: none; }
+.md-typeset .mermaid { overflow-x: auto; }
+.md-typeset .mermaid svg { max-width: 100%; height: auto; }
+.md-typeset pre > code { font-size: 0.78rem; }
+.md-nav__link { overflow-wrap: anywhere; }
+
+@media (max-width: 44.9375em) {
+  .md-typeset h1 { font-size: 1.65em; }
+}
+
+@media print {
+  .md-typeset .arithmatex { overflow: visible; }
+}

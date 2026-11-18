@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {# Load the pinned local runtime before Material, avoiding its CDN fallback. #}
+  <script src="{{ 'javascripts/vendor/mermaid-11.12.1.min.js' | url }}"></script>
+  {{ super() }}
+{% endblock %}

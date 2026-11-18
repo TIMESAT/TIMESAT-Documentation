@@ -1,0 +1,123 @@
+site_name: TIMESAT 4 User Guide — Public Draft (Under Review)
+site_description: Scientific background, data preparation and GUI and CLI workflows for TIMESAT 4.
+# Intended project-site address; this configuration does not activate Pages.
+site_url: https://timesat.github.io/TIMESAT-Documentation/
+repo_url: https://github.com/TIMESAT/TIMESAT-Documentation
+repo_name: TIMESAT / Documentation
+edit_uri: ''
+docs_dir: website
+site_dir: site
+strict: true
+use_directory_urls: true
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font: false
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: en
+
+hooks:
+  - scripts/site_hooks.py
+
+watch:
+  - README.md
+  - user-guide
+  - examples
+  - assets
+  - overrides
+  - scripts/site_hooks.py
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+    absolute_links: warn
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/vendor/mathjax-tex-svg-3.2.2.js
+
+extra:
+  generator: false
+
+nav:
+  - Guide home: README.md
+  - Table of contents: user-guide/table-of-contents.md
+  - 'Part I · Getting oriented':
+      - '1 Introduction': user-guide/01-introduction.md
+      - '2 Software Overview': user-guide/02-software-overview.md
+      - '3 Installation and release identification': user-guide/03-installation.md
+  - 'Part II · Shared scientific and data reference':
+      - '4 Preparing input data': user-guide/04-input-data.md
+      - '5 Scientific methods and seasonal interpretation': user-guide/05-scientific-methods.md
+      - '6 Parameters and configuration': user-guide/06-parameters-and-configuration.md
+      - '7 Outputs and quality information': user-guide/07-outputs-and-quality.md
+  - 'Part III · Using TIMESAT':
+      - '8 Exploring data with the GUI': user-guide/08-exploration.md
+      - '9 Running raster processing from the GUI': user-guide/09-raster-processing.md
+      - '10 Running raster processing with the CLI': user-guide/10-raster-processing.md
+  - 'Part IV · Examples and responsible use':
+      - '11 Worked examples': user-guide/11-worked-examples.md
+      - '12 Troubleshooting and known limitations': user-guide/12-troubleshooting.md
+      - '13 Reproducibility and scientific reporting': user-guide/13-reproducibility.md
+  - Appendices:
+      - 'A Glossary and notation': user-guide/appendix-a-glossary.md
+      - 'B Current and legacy workflows': user-guide/appendix-b-legacy.md
+      - 'C Advanced interfaces': user-guide/appendix-c-advanced-interfaces.md
+      - 'D References and acknowledgements': user-guide/appendix-d-references.md
+  - Supporting material:
+      - Validation scope: user-guide/validation.md
+      - Tutorial scripts: examples/README.md
+      - Figure provenance: assets/README.md
+      - Website runtime notices: javascripts/vendor/THIRD-PARTY-NOTICES.md

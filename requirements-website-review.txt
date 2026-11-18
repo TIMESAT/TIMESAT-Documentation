@@ -1,0 +1,4 @@
+# Optional browser validation, separate from the deployment build.
+-r requirements-website.txt
+playwright==1.65.2
+greenlet==3.5.6
