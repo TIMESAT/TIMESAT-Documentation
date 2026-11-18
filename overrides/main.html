@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% block footer %}
+  {# The home page already exposes contents and organization links in the masthead. #}
+  {% if not (page and page.is_homepage) %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
 {% block scripts %}
   {# Load the pinned local runtime before Material, avoiding its CDN fallback. #}
   <script src="{{ 'javascripts/vendor/mermaid-11.12.1.min.js' | url }}"></script>

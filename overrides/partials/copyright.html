@@ -1,13 +1,10 @@
-{# Extend Material's footer metadata; its MIT licence is retained in the vendor notices. #}
+{# Optional Material footer credits; its MIT licence is retained in the vendor notices. #}
 <div class="md-copyright">
   {% if config.copyright %}
     <div class="md-copyright__highlight">
       {{ config.copyright }}
     </div>
   {% endif %}
-  <a href="https://github.com/TIMESAT" class="timesat-organization-link">
-    Back to TIMESAT GitHub
-  </a>
   {% if not config.extra.generator == false %}
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">

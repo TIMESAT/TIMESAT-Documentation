@@ -43,11 +43,11 @@ formatting and byte-identical third-party distributions across platforms.
 | [scripts/check_browser.py](scripts/check_browser.py) | Reproducible local responsive/browser checks |
 | [website/stylesheets/extra.css](website/stylesheets/extra.css) | Blue-and-gold text branding, traditional reading typography, responsive equations and light/dark presentation |
 | [website/javascripts/mathjax.js](website/javascripts/mathjax.js) | Equation-renderer configuration |
-| [overrides/main.html](overrides/main.html) | Loads the pinned local diagram renderer before Material |
+| [overrides/main.html](overrides/main.html) | Omits the home-page footer and loads the pinned local diagram renderer before Material |
 | [overrides/partials/logo.html](overrides/partials/logo.html) | Uses the project name without asserting an official logo |
 | [overrides/partials/source.html](overrides/partials/source.html) | Plain repository link without live GitHub-statistics requests |
 | [overrides/partials/header.html](overrides/partials/header.html) and [guide-navigation.html](overrides/partials/guide-navigation.html) | Single masthead with contents, organization and documentation-source links |
-| [overrides/partials/copyright.html](overrides/partials/copyright.html) | Global organization-homepage footer link; existing optional copyright/generator rendering retained |
+| [overrides/partials/copyright.html](overrides/partials/copyright.html) | Optional copyright/generator rendering without a repeated organization-homepage link |
 | [MathJax runtime](website/javascripts/vendor/mathjax-tex-svg-3.2.2.js) and [licence](website/javascripts/vendor/mathjax-LICENSE.txt) | Unmodified MathJax 3.2.2 SVG distribution and Apache 2.0 terms |
 | [Mermaid runtime](website/javascripts/vendor/mermaid-11.12.1.min.js) and [licence](website/javascripts/vendor/mermaid-LICENSE.txt) | Unmodified Mermaid 11.12.1 distribution and MIT terms |
 | [Material licence](website/javascripts/vendor/material-LICENSE.txt) | Retained theme redistribution notice |

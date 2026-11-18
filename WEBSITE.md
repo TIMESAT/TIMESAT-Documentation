@@ -119,13 +119,13 @@ external browser requests. Screenshots and results are kept in ignored
   The theme's generic favicon and interface controls are theme resources.
 - Locally available fonts, local full-text search, highlighted/copyable code, scrollable
   tables, responsive navigation and accessible heading links are enabled.
-- Every page has a **Back to TIMESAT GitHub** footer link to the organization
-  homepage. The documentation-repository source link is a separate destination;
-  chapter Markdown needs no duplicate links.
+- Contents and organization links are provided in the fixed masthead. The home
+  page has no footer navigation, and no page repeats the organization link in
+  its footer. The documentation-source link is a separate destination.
 - The single masthead provides **Contents** and **TIMESAT GitHub** without a
   second navigation bar. Small screens use labelled list/GitHub icons; the source
   link remains available in the chapter drawer. Existing chapter-opening links
-  and previous/next footer navigation are retained. The header
+  and previous/next footer navigation on reading pages are retained. The header
   override derives from the pinned Material template; review it when upgrading
   the theme.
 - The existing equation uses PyMdown Arithmatex and locally served MathJax SVG

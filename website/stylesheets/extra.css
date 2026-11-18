@@ -83,9 +83,6 @@
 .md-typeset .mermaid svg { max-width: 100%; height: auto; }
 .md-footer { margin-top: 2rem; background: #083a5b; color: #fff; }
 .md-footer-meta { background: #062d47; }
-.md-footer-meta .timesat-organization-link { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-size: 0.7rem; text-underline-offset: 0.2rem; }
-.md-footer-meta .timesat-organization-link:hover { text-decoration: underline; }
-.md-footer-meta .timesat-organization-link:focus-visible { outline: 2px solid var(--timesat-gold); outline-offset: 3px; }
 @media (max-width: 76.2344em) {
   .timesat-brand__edition { display: none; }
   .timesat-header-links { gap: 0.7rem; }
