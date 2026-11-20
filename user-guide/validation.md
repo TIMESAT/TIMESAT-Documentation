@@ -1,4 +1,4 @@
-# Validation of this review edition
+# Validation scope and results
 
 **Reference validation record · 18 November 2026**
 

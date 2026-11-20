@@ -2,7 +2,7 @@
 
 [Previous: Introduction](01-introduction.md) · [Guide home](../README.md) · [Contents](table-of-contents.md)
 
-**Public Draft (Under Review) · 18 November 2026**
+**18 November 2026**
 
 ## 2.1 Software components
 

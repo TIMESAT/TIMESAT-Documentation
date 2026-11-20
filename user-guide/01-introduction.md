@@ -2,7 +2,7 @@
 
 [Guide home](../README.md) · [Contents](table-of-contents.md) · [Next: Software Overview](02-software-overview.md)
 
-**Public Draft (Under Review) · 18 November 2026**
+**18 November 2026**
 
 ## 1.1 Purpose of TIMESAT
 

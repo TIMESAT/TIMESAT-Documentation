@@ -85,7 +85,7 @@ The source-preservation comparison used during initial website preparation is
 optional for later editorial work. To check against a particular JSON file of
 source-file SHA-256 hashes, add `--source-baseline path/to/snapshot.json` to
 `scripts/check_site.py`. Choose a snapshot appropriate to the task; the original
-website snapshot predates approved authorship and public-draft updates.
+website snapshot predates approved authorship and publication-title updates.
 
 Optional browser checks:
 

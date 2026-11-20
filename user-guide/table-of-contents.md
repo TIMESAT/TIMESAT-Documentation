@@ -2,9 +2,9 @@
 
 [Guide home](../README.md)
 
-**Public Draft (Under Review) · 18 November 2026**
+**18 November 2026**
 
-All thirteen chapters and four appendices are available in this review draft. Shared scientific definitions and product conventions are maintained once and referenced from GUI and CLI procedures. [Validation](validation.md) identifies the environments and workflows actually checked; available text does not imply that every configuration or platform has been tested.
+All thirteen chapters and four appendices are available in this User Guide. Shared scientific definitions and product conventions are maintained once and referenced from GUI and CLI procedures. [Validation](validation.md) identifies the environments and workflows actually checked; available text does not imply that every configuration or platform has been tested.
 
 ## Part I Getting oriented
 

@@ -2,7 +2,7 @@
 
 [Previous](02-software-overview.md) · [Contents](table-of-contents.md) · [Next](04-input-data.md)
 
-**User Guide review draft · Reference: Core 4.4.1, CLI 1.9.2, GUI 1.6.2**
+**Reference versions: Core 4.4.1, CLI 1.9.2, GUI 1.6.2**
 
 ## 3.1 Choosing an environment
 

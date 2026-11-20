@@ -1,10 +1,10 @@
-# TIMESAT 4 User Guide — Public Draft (Under Review)
+# TIMESAT 4 User Guide
 
 Official documentation and user guides for TIMESAT 4, CLI, and GUI.
 
 ## TIMESAT 4 User Guide
 
-**Public Draft (Under Review) · 18 November 2026**
+**18 November 2026**
 
 The TIMESAT 4 User Guide is intended for researchers, students and practitioners
 analysing satellite time series and vegetation seasonality. It explains the
@@ -28,7 +28,7 @@ troubleshooting, reproducibility guidance and four reference appendices.
 
 The [validation record](user-guide/validation.md) distinguishes tested examples
 from untested platforms, official GUI interactions and advanced configurations.
-Public-draft status does not imply independent biological accuracy or validation
+Publication does not imply independent biological accuracy or validation
 of every procedure. Original tutorial code and its usage are in
 [examples/](examples/README.md); approved figure provenance is in
 [assets/](assets/README.md).

@@ -1,7 +1,7 @@
 # Documentation website preparation and validation
 
 **Date:** 18 November 2026  
-**Scope:** website preparation and public-draft validation; deployment is controlled by the workflow and repository settings.
+**Scope:** website preparation and validation; deployment is controlled by the workflow and repository settings.
 
 ## Result
 
@@ -11,10 +11,9 @@ four parts, thirteen chapters and four appendices, followed by supporting
 validation, tutorials, figure provenance and website runtime notices.
 
 Initial website preparation left all **26 migrated files byte-for-byte unchanged**.
-Subsequent approved editorial updates clarified authorship and contribution roles
-and labelled the guide **Public Draft (Under Review)**. Scientific explanations,
-equations, configuration examples, tutorial scripts and the scientific figure
-were preserved. The software reference versions and GUI → CLI → Core architecture
+Subsequent approved editorial updates clarified authorship and contribution roles.
+Scientific explanations, equations, configuration examples, tutorial scripts and
+the scientific figure were preserved. The software reference versions and GUI → CLI → Core architecture
 remain as stated in the guide; no application source was changed.
 
 The build uses **Python 3.12, MkDocs 1.6.1, Material for MkDocs 9.8.1,
@@ -26,7 +25,7 @@ TIMESAT's application dependencies.
 
 Initial website preparation added twenty-one source/configuration files and
 preserved pre-existing migration work. Later approved publication preparation
-updated the draft labels, attribution and website checks without rewriting the
+updated the guide title, attribution and website checks without rewriting the
 scientific chapters.
 Publication preparation also added Git attributes to preserve existing Markdown
 formatting and byte-identical third-party distributions across platforms.
@@ -139,7 +138,7 @@ citation reachability was not re-certified by the local checker.
 
 - Scientific explanations, citations and reference-version statements are
   preserved. Authorship/contribution statements are approved, and the edition
-  is labelled **TIMESAT 4 User Guide — Public Draft (Under Review)**.
+  is titled **TIMESAT 4 User Guide**.
 - The existing illustration's [provenance](assets/README.md) was consulted. No
   historical artwork, application screenshot, new project logo or restricted
   dataset was introduced.
@@ -153,7 +152,7 @@ citation reachability was not re-certified by the local checker.
   action.
 - These website software licences do not assign ownership of the User Guide or
   grant a new licence for its text. No documentation reuse licence is assigned.
-  Public-draft publication does not imply final scientific sign-off.
+  Website publication does not imply final scientific sign-off.
 
 No confirmed website build, navigation, responsive-rendering or disclosure
 blocker remains in the tested scope. Website readiness is separate from final
